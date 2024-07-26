@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Js Promise</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container mt-3">
+    <div class="row">
+      <h1>Js Promise</h1>
+      <hr>
+      <article>
+        <p>
+          1. Create a function fetchData that returns a Promise. The Promise should resolve with the string
+          "Data fetched successfully" after a delay of 2 seconds. Use setTimeout to simulate the delay.
+          Test your function by calling it and using .then() to log the resolved value to the console. <br>
+
+          2. Modify the fetchData function from Question 1 to sometimes reject the Promise with an error message
+          "Failed to fetch data". Modify your test to handle this rejection using .catch(). <br>
+          3. Convert the fetchData function from Question 1 to use async and await instead of .then().
+          Ensure to handle errors using try and catch <br>
+          4. Write a function "getCountryData" that fetches data from the public API "
+          https://restcountries.com/v3.1/all ".
+          Parse the JSON response and log the data to the console. Additionally, use DOM manipulation to display the
+          data on the web page.
+          Make sure to handle any errors that might occur during the fetch operation and display an appropriate error
+          message in the div if the fetch fails. (deploy the webpage on github) <br>
+          5. Create a detailed note on Promises. Take a picture of your notes and upload it to your GitHub repository
+        </p>
+        <hr>
+      </article>
+
+
+    </div>
+  </div>
+  <section>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-6">
+          <h6>API " https://restcountries.com/v3.1/name/ " selected country data fetching</h6>
+          <hr>
+          <form action="">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Enter the country name - eg: 'china'" required
+                aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <button class="btn btn-danger">Get the Details</button>
+              
+            </div>
+          </form>
+          <div class="container">
+            <div class="row">
+              <div class="row cardImageContainer mb-3">
+                <!-- API Fetched content place -->
+              </div>
+            </div>
+          </div>
+          <div class="image-container">
+          </div>
+        </div>
+        <div class="col-6">
+          <h6>API " https://restcountries.com/v3.1/all " all country flag with name fetching</h6>
+          <hr>
+          <!-- <form action=""> -->
+            <div class="input-group mb-3">
+              <!-- <input type="text" class="form-control" placeholder="Enter keywords here..." required
+                aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+              
+              <button class="btn btn-success" onclick="getDataFromAPI()">Get the all Country Flags</button>
+            </div>
+          <!-- </form> -->
+          <div class="container">
+            <div class="row">
+              <div class="row cardImageContainer-2 mb-3">
+                <!-- API Fetched content place -->
+              </div>
+            </div>
+          </div>
+          <div class="image-container">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="Api.js"></script>
+  <script src="Api2.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
